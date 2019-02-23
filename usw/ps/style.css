@@ -1,0 +1,107 @@
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(16,22,59,0.9287598944591029) 13%, rgba(65,67,158,0.8421743697478992) 100%);
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+}
+#top_panel {
+  width: 520px;
+  height: 40px;
+  background-color: grey;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#top_panel button {
+  width: 70px;
+}
+#design_window {
+	width: 520px;
+	height: 520px;
+	margin-left: auto;
+	margin-right: auto;
+  background-color: #014a40;
+
+}
+#design_window table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('checkered.png');
+  background-repeat: repeat;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+#controls {
+  height: 100px;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#slide_box {
+  background-color: white;
+  width: 800px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x:scroll;
+
+}
+
+.slide {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+.slide table{
+  border-collapse: collapse;
+}
+
+.slide table tr td {
+  background-color:grey;
+
+  width: 8px;
+  height: 8px;
+}
+#code_window {
+  background-color: white;
+  height: 200px;
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  padding: 40px;
+  font-size: 8px;
+
+}
+
+
+.tile {
+	width: 60px;
+	height: 60px;
+  background-image: url("led_off.png");
+  background-position: center;
+  background-size: contain;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	opacity: 100%;
+  margin: 0;
+  padding: 0;
+}
+.led {
+  border-radius: 50%;
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.3;
+}
+
+.testclass {
+    background: red;
+}

@@ -1,0 +1,119 @@
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+header {
+ width: 990px;
+ text-align: center;
+ background-color: #d4ffe1;
+
+}
+#left_pane {
+  display: inline-block;
+	width: 380px;
+	float: left;
+}
+#right_pane {
+	display: inline-block;
+	width: 600px;
+
+	float: left;
+}
+#instruction {
+	padding: 20px;
+	width: 100%;
+}
+
+#execute {
+	background-color: purple;
+	border: none;
+	color: white;
+	padding: 5px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 2px 2px;
+	cursor: pointer;
+}
+#parameters {
+	margin-top: -7px;
+	color: purple;
+}
+
+#register_table {
+	text-align: center;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#register_table tr th {
+ background-color: #4d6277;
+ color: white;
+}
+#status_flag {
+	width: 100%;
+	height: 130px;
+
+}
+#status_table {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#status_table tr th {
+ background-color: #3d5d35;
+ color: white;
+}
+#status_table tr td{
+	padding: 3px;
+	text-align: center;
+}
+#instruction_table {
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#instruction_table tr th{
+	background-color: #7b081f;
+  color: white;
+}
+#instruction_table tr td{
+	padding: 3px;
+	text-align: center;
+  outline: 1px solid #e4e2e2;
+}
+#status_comment {
+	color: blue;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#output {
+	width: 100%;
+}
+#guide {
+	padding: 20px;
+  height: 400px;
+	width: 100%;
+	background-color: #f9f9f9;
+}
+#datasheet {
+	margin-top: 40px;
+	display: inline-block;
+	float:bottom;
+}
+
+
+.register {
+	width: 40px;
+	text-align: center;
+}

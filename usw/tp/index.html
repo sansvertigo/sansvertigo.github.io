@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style13.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="newlogic11.js"></script>
+    <title>Theoretical Processor Trainer</title>
+  </head>
+  <body>
+    <header>
+      <h1>Theoretical Processor Trainer</h1>
+      <sub><i>This tool's intended purpose is to help you understand how to build and decode instructions/extensions<br> This tool may not be perfect! You are responsible for checking your own work!</i></sub>
+    </header>
+    <sub>
+    <p>Todo list :<br>
+      1. Add missing guides and cycle counts/walkthroughs<br>
+      2. Add reverse assembler field and walkthrough in guide window<br>
+      3. Verify jumps and all other operations are working correctly
+    </p>
+        </sub>
+    <div id="left_pane">
+      <div id="controls">
+        <div id="instruction">
+          Instruction :
+          <select id="operation" onchange="info()" >
+            <option value="" selected disabled hidden>-</option>
+            <option value="ADD">ADD</option>
+            <option value="MOVE">MOVE</option>
+            <option value="STORE">STORE</option>
+            <option value="LOAD">LOAD</option>
+            <option value="JMP">JMP</option>
+            <option value="JPZ">JPZ</option>
+            <option value="JPP">JPP</option>
+            <option value="JPN">JPN</option>
+          </select>
+          <input style="width:30px" type="text" id="input1">,
+          <input style ="width:30px" type="text" id="input2">
+          <button id="execute" type="button" onclick="execute()">Execute</button>
+          <p id="parameters">Parameters:</p>
+          <table id="register_table">
+            <tr>
+              <th colspan="5">Registers</th>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+              <td>D</td>
+              <td>E</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="register" id="register_A" value="1"></td>
+              <td><input type="text" class="register" id="register_B" value="2"></td>
+              <td><input type="text" class="register" id="register_C" value="3"></td>
+              <td><input type="text" class="register" id="register_D" value="4"></td>
+              <td><input type="text" class="register" id="register_E" value="5"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="diagram"></div>
+      <div id="output">
+        <div id="status_flag">
+          <table id='status_table'>
+            <tr>
+              <th colspan='8'>Status Flag</th>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>6</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+              <td>2</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </table>
+        </div>
+        <div id="instruction_content">
+          <table id="instruction_table">
+            <tr>
+              <th colspan='8'>Instruction</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan='3'>Instr</td>
+              <td>Ext1</td>
+              <td>Ext2</td>
+            </tr>
+            <tr>
+              <td>BIN</td>
+              <td id="instruction_bin1">-</td>
+              <td id="instruction_bin2">-</td>
+              <td id="instruction_bin3">-</td>
+              <td id="extension_bin">-</td>
+              <td id="extension_bin2">-</td>
+            </tr>
+            <tr>
+              <td>HEX</td>
+              <td colspan='3' id="instruction_hex">-</td>
+              <td id="extension_hex">-</td>
+              <td id="extension_hex2">-</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="right_pane">
+      <div id="guide"><span style='color:grey;'>Walkthrough</span></div>
+    </div>
+    <div id="datasheet"></div>
+    <div style="display:none;">
+      <div id="add_reg">
+        <strong>ADD %input1%,%input2%</strong><br>
+        ---------------------------<br>
+        From the data sheet we can determine the following,<br>
+        	• The opcode for <strong>ADD</strong> is <span style='color:red;'>00</span><br>
+        	• The code for our Destination Register (<strong>%input1%</strong>) is <span style='color:blue'>%input1_code%</span><br>
+        	• The code for our Source Register (<strong>%input2%</strong>) is <span style='color:green'>%input2_code%</span><br><br>
+        Therefore the complete instruction word is <span style='color:red;'>00</span> <span style='color:blue'>%input1_code%</span> <span style='color:green'>%input2_code%</span><br>
+        When we convert our instruction word <span style='color:red;'>00</span><span style='color:blue'>%input1_code%</span><span style='color:green'>%input2_code%</span> to Hex we get <span style='color:brown';>%hex_instruction%</span>
+        <br><br><strong>Execute</strong>
+        <br>---------------------------<br>The value of register %input2% is added to the value of register %input1% and the result is stored in register %input1%
+        <br>%input1%= %input2% + %input1%<br>%input1%= %input1_value% + %input2_value%<br>%input1% = %add_total%
+      </div>
+      <div id="add_val">
+        <strong>ADD %input1%,%input2%</strong><br>
+        ---------------------------<br>
+        From the data sheet we can determine the following,<br>
+        • The opcode for <strong>ADD</strong> is <span style='color:red;'>00</span><br>
+        • The code for our Destination Register (<strong>%input1%</strong>) is <span style='color:blue'>%input1_code%</span><br>
+        • Because the second parameter is a value (<strong>%input2%</strong>) and not a register, we will set the last part of our instruction word to <span style='color:green'>101</span> as the value is contained in one extension word<br><br>
+        Therefore the complete instruction word is <span style='color:red;'>00</span> <span style='color:blue'>%input1_code%</span> <span style='color:green'>%input2_code%</span><br>
+        When we convert our instruction word <span style='color:red;'>00</span><span style='color:blue'>%input1_code%</span><span style='color:green'>%input2_code%</span> to Hex we get <span style='color:brown';>%hex_instruction%</span>
+        <br><br><strong>Extension</strong><br>
+        The value %input2% is stored in an extension word <strong>%extension_bin1%</strong>, if number is negative you will need to store it in a signed bite using 2's complement
+
+        <br><br><strong>Execute</strong>
+        <br>---------------------------<br>The value %input2% is added to the value of register %input1% and the result is stored in register %input1%
+        <br>%input1%= %input2% + %input1%<br>%input1%= %input1_value% + %input2_value%<br>%input1% = %add_total%
+      </div>
+      <div id="move_reg">
+        <strong>Move %input1%,%input2%</strong><br>
+        ---------------------------<br>
+        From the data sheet we can determine the following,<br>
+        • The opcode for <strong>MOVE</strong> is <span style='color:red;'>01</span><br>
+        • The code for our Destination Register (<strong>%input1%</strong>) is <span style='color:blue'>%input1_code%</span><br>
+        • The code for our Source Register (<strong>%input2%</strong>) is <span style='color:green'>%input2_code%</span><br><br>
+      Therefore the complete instruction word is <span style='color:red;'>01</span> <span style='color:blue'>%input1_code%</span> <span style='color:green'>%input2_code%</span><br>
+      When we convert our instruction word <span style='color:red;'>01</span><span style='color:blue'>%input1_code%</span><span style='color:green'>%input2_code%</span> to Hex we get <span style='color:brown';>%hex_instruction%</span>
+      <br><br>The value of register %input2% (%input2_value%) is moved to the value of register %input1%;<br>%input1% = %input2_value%
+      <br> if value being moved is negative, the extension word will hold a signed number;
+      </div>
+      <div id="move_val">
+        <strong>MOVE %input1%,%input2%</strong><br>
+        ---------------------------<br>
+        From the data sheet we can determine the following,<br>
+        • The opcode for <strong>MOVE</strong> is <span style='color:red;'>01</span><br>
+        • The code for our Destination Register (<strong>%input1%</strong>) is <span style='color:blue'>%input1_code%</span><br>
+        • Because the second parameter is a value (<strong>%input2%</strong>) and not a register, we will set the last part of our instruction word to <span style='color:green'>101</span> as the value is contained in one extension word<br><br>
+
+        <br><br>The value %input2% is moved to the value of register %input1%;<br>%input1% = %input2_value%
+        <br><br><strong>Extension</strong><br>
+        The value %input2% is stored in an extension word <strong>%extension_bin1%</strong>, if number is negative you will need to store it in a signed bite using 2's complement
+      </div>
+      <div id="store">
+store guide yet to be added, but results should be correct
+      </div>
+      <div id="load">
+load guide yet to be added, but results should be correct
+      </div>
+      <div id="jmp">
+jmp guide yet to be added, but results *may be correct
+      </div>
+      <div id="jpz">
+jpz guide yet to be added, but results *may be correct
+      </div>
+      <div id="jpp">
+jpp guide yet to be added, but results *may be correct
+      </div>
+      <div id="jpn">
+jpn guide yet to be added, but results *may be correct
+      </div>
+    </div>
+  </body>
+</html>
