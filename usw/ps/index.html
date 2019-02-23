@@ -2,12 +2,13 @@
 <html lang="en">
   <title>Sense Hat Art </title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <script type="text/javascript" src="logic.js"></script>
-  <script src="jscolor.js"></script>
+  <script type="text/javascript" src="js/logic.js"></script>
+  <script src="js/jscolor.js"></script>
   <body onload="init()">
     <header>
+      <a style='color: white;font-family:verdana;' href="https://github.com/sansvertigo/sensehat-art-designer">View this project on GitHub</a>
     </header>
 
     <div id="top_panel">
@@ -19,7 +20,7 @@
       <button id="clear_dw" onclick="clear_dw.call(this)">Clear Designer</button>
     </div>
     <div id="design_window"></div>
-	<div id="controls">Color: <input class="jscolor" id="color_select" value="ab2567">  </div><br><br>Add Slide  <button style="width:20px;height:20px;" onclick="add_slide.call(this)">+</button>
+	<div id="controls">Color: <input class="jscolor" id="color_select" value="ab2567">  </div><br>
   <div id="slide_box">
 
   </div>

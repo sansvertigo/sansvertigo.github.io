@@ -32,7 +32,7 @@ header {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('checkered.png');
+  background-image: url('../img/checkered.png');
   background-repeat: repeat;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
 }
@@ -84,7 +84,7 @@ header {
 .tile {
 	width: 60px;
 	height: 60px;
-  background-image: url("led_off.png");
+  background-image: url("../img/led_off.png");
   background-position: center;
   background-size: contain;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

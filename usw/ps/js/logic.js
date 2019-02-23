@@ -9,11 +9,13 @@ function init() {
   dwHTML  += "</table>"
   document.getElementById('design_window').innerHTML = dwHTML;
 }
+
 function clear_dw() {
   init();
   toggleview();
   toggleview();
 }
+
 function toggleview() {
   var background = $('.tile').css('background-image');
   var tiles = document.getElementsByClassName("tile")
@@ -29,10 +31,10 @@ function toggleview() {
     view_mode = "led";
     document.getElementById('view_mode').innerHTML = "Led View"
     //Set background image of all tiles to led_off
-    $(".tile").css({ 'background-image' : 'url("led_off.png")', 'box-shadow' : '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' })
+    $(".tile").css({ 'background-image' : 'url("img/led_off.png")', 'box-shadow' : '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' })
     for (i = 0; i < tiles.length; i++) {
       //if tile has background color value, use led_on.png with alpha channel to show led color
-      if (tiles[i].style.backgroundColor !== "rgba(0, 0, 0, 0)") { tiles[i].style.backgroundImage = "url('led_on.png')";}
+      if (tiles[i].style.backgroundColor !== "rgba(0, 0, 0, 0)") { tiles[i].style.backgroundImage = "url('img/led_on.png')";}
     }
   }
 }
@@ -46,13 +48,13 @@ function paint() {
   if (tilecolor === "rgba(0, 0, 0, 0)" || tilecolor !== color_selection){
     $(this).css('background-color', color_selection);
     if (view_mode === "led") {
-      $(this).css('background-image', "url('led_on.png')");
+      $(this).css('background-image', "url('img/led_on.png')");
     }
   }
   else {
     $(this).css('background-color', "rgba(0, 0, 0, 0)");
     if (view_mode === "led") {
-    $(this).css('background-image', "url('led_off.png')");
+    $(this).css('background-image', "url('img/led_off.png')");
     }
   }
 }
