@@ -10,13 +10,10 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
-
 header {
  width: 990px;
  text-align: center;
  background-color: #d4ffe1;
- margin-top: 70px;
- margin-left: -8px;
 
 }
 #left_pane {
