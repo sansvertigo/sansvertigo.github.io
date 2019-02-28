@@ -1,0 +1,109 @@
+<div class="hidden">
+<!-- User selects quote-->
+<div id="quote">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="quote_a">Short quotation</option>
+      <option value="quote_b">Long quotation</option>
+      <option value="quote_c">Secondary referencing </option>
+      <option value="quote_D">Author with more than one publication in the same year</option>
+   </select>
+</div>
+
+<!-- User selects book-->
+<div id="book">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="book_a">Book with single author </option>
+      <option value="book_b">Book with two or three authors </option>
+      <option value="book_c">Book with more than three authors </option>
+      <option value="book_d">Chapter/section in an edited book</option>
+      <option value="book_e">Book with editor(s)</option>
+      <option value="book_f">Lines within a play</option>
+      <option value="book_g">E-book</option>
+      <option value="book_h">E-Book via an e-book reader eg Kindle</option>
+   </select>
+</div>
+
+<!-- User selects journal-->
+<div id="journal">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="journal_a">Journal article (printed) </option>
+      <option value="journal_b">Journal article in an online collection eg Science Direct (e-journal)</option>
+      <option value="journal_c">Journal article in an internet journal (e-journal) </option>
+      <option value="journal_d">Journal article in an open access journal (e-journal)</option>
+   </select>
+</div>
+
+<!-- User selects newspaper-->
+<div id="newspaper">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="newspaper_a">Newspaper article (printed)</option>
+      <option value="newspaper_b">Newspaper article from Internet version of a newspaper</option>
+      <option value="newspaper_c">Newspaper interview</option>
+   </select>
+</div>
+
+<!-- User selects internet-->
+<div id="internet">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="internet_a">Web pages with individual authors</option>
+      <option value="internet_b">Web pages with organisations as authors</option>
+      <option value="internet_c">Web pages with no authors</option>
+      <option value="internet_d">Web pages with no date</option>
+      <option value="internet_e">Blogs</option>
+      <option value="internet_f">Social Networking Sites</option>
+      <option value="internet_g">Wikis</option>
+   </select>
+</div>
+
+<!-- User selects "Conferences/Theses/Public Lectures" (ctpl)-->
+<div id="ctpl">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="ctpl_a">Full conference proceedings (printed)</option>
+      <option value="ctpl_b">Conference paper published on the Internet</option>
+      <option value="ctpl_c">Theses</option>
+      <option value="ctpl_d">Public Lecture</option>
+   </select>
+</div>
+
+<!-- User selects other-->
+<div id="other">
+   <select class="subcat_select" onchange="load_inputs(this.value, this.options[this.selectedIndex].innerHTML)">
+      <option value="" selected disabled hidden>Choose Type</option>
+      <option value="other_a">UK Statutes (Acts of Parliament) pre 1963</option>
+      <option value="other_b">UK Statutes (Acts of Parliament) post 1963</option>
+      <option value="other_c">Government Department publication</option>
+      <option value="other_d">Legal cases</option>
+      <option value="other_e">British Standards from online databases</option>
+      <option value="other_f">Market Research/Financial Reports from online databases</option>
+      <option value="other_g">Statutory Instruments: Health & Safety Regulations</option>
+      <option value="other_h">Book illustrations, diagrams or tables</option>
+      <option value="other_i">Photographs — prints/slides</option>
+      <option value="other_j">Photographs from the Internet</option>
+      <option value="other_k">Photographs in online collections (e.g. Flickr)</option>
+      <option value="other_l">Paintings/drawings in online collections</option>
+      <option value="other_m">Sculpture</option>
+      <option value="other_n">Art Exhibition Catalogue</option>
+      <option value="other_o">TV programme</option>
+      <option value="other_p">Film</option>
+      <option value="other_q">Film on DVD</option>
+      <option value="other_r">Film on Youtube</option>
+      <option value="other_s">Musical score</option>
+      <option value="other_t">Music or spoken word recording on audio CDs</option>
+      <option value="other_u">Vidcasts/vodcasts</option>
+      <option value="other_v">iTunes U collection</option>
+      <option value="other_w">Podcast</option>
+      <option value="other_x">iBook</option>
+      <option value="other_y">Live performance — band concert</option>
+      <option value="other_z">Live performance — play</option>
+      <option value="other_aa">Computer Game</option>
+      <option value="other_ab">Computer Programme</option>
+      <option value="other_ac">Personal Communications</option>
+   </select>
+</div>
+</div>

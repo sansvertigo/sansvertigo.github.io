@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>USW Harvard Reference Generator</title>
+      <link rel="stylesheet" type="text/css" href="style/main.css">
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="/favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+      <script src="js/jquery.min.js"></script>
+      <script src="js/logic.js"></script>
+   </head>
+   <html>
+      <body onload="init()">
+         <div id="wrapper">
+            <div id="main">
+               <div id="form">
+                  <div id="topbar">
+                     <select id="catagory_select" onchange="select_catagory(this.value)">
+                        <option value="" selected disabled hidden>Choose Source Type</option>
+                        <option value="quote">Quote</option>
+                        <option value="book">Book</option>
+                        <option value="journal">Journal</option>
+                        <option value="newspaper">Newspaper</option>
+                        <option value="internet">Internet</option>
+                        <option value="ctpl">Conferences/Theses/Public Lectures</option>
+                        <option value="other">Other Sources</option>
+                     </select>
+                     <span id="subcat">
+                     </span>
+                  </div>
+                  <div id="reference_builder">
+                     <div id="type">
+                        <h2>Book with Single Author</h2>
+                     </div>
+                     <div id="references">
+                        <h3>Reference order:</h3>
+                        <div id="reference_content">
+                          <button type="button" onclick="generate('book_a')">Generate</button>
+                        </div>
+                     </div>
+                     <div id="output">
+                        <h3>In-text:</h3>
+                        <div id="intext_content">
+                        </div>
+                        <h3>Reference:</h3>
+                        <div id="reference_content">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        <div id="subcat_html"></div>
+        <div id="refinput_html"></div>
+        <div id="generate_html"></div>
+
+
+      </body>
+      <footer>
+
+
+      </footer>
+   </html>

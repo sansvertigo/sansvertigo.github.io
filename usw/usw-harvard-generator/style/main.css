@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding:  0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Crimson Text', serif;
+  background-image: url("../img/paper.jpg");
+
+  color: #303133;
+
+}
+
+#wrapper {
+  min-height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+#topbar {
+  background-color: grey;
+  width: 700px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  ////outline: 1px solid orange;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+#form {
+  margin-top: 20px;
+  height: 700px;
+  width: 800px;
+  //outline: 1px solid blue;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+#type {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #e3eaf4;
+  //outline: 1px solid yellow;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+#reference_builder {
+  height: 500px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  //outline: 1px solid red;
+  background-color: #f7f9fc;
+  box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.45);
+}
+
+#references {
+  margin-top: 20px;
+  padding-left: 20px;
+  display:inline-block;
+  float: left;
+  width: 330px;
+  height: 100%;
+}
+
+#form_table {
+  //outline: 1px solid purple;
+  width: 320px;
+}
+
+
+
+#output {
+  margin-top: 20px;
+  padding-left: 20px;
+
+  display: inline-block;
+  float: right;
+  width: 330px;
+  height: 100%;
+}
+
+#intext_content {
+  height: 120px;
+
+}
+
+
+
+
+header {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  clear: both;
+  text-align: center;
+  background-color: #0d1219;
+  color: white;
+
+}
+
+footer {
+  height: 120px;
+  margin-top: -100px;
+  position: relative;
+  clear: both;
+  text-align: center;
+  background-color: #0d1219;
+  color: white;
+}
