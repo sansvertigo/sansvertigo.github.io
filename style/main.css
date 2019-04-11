@@ -5,7 +5,7 @@
 
 html, body {
   height: 100%;
-  background-color: #e6e6e6;
+  background-color: #EDF6FD;
   font-family: 'Major Mono Display', monospace;
 }
 
@@ -31,6 +31,11 @@ nav a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode:forwards;
 }
 
 #main {
@@ -38,18 +43,11 @@ nav a {
   padding-bottom: 100px;
 }
 
-#construction {
-  width: 80px;
-  -webkit-animation: rotation 8s infinite linear;
-}
-
 #message {
   width: 100%;
   padding-top:30vh;
   text-align: center;
   font-size: 30px;
-
-
 }
 
 .link {
@@ -92,4 +90,13 @@ footer {
 footer a {
   text-decoration: none;
   color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
