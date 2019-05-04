@@ -6,40 +6,132 @@
 html, body {
   height: 100%;
   background-color: #0d1219;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Roboto', sans-serif;
   color: white;
-}
 
-nav {
-  width: 400px;
-  margin-top: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-nav a {
-  font-size: 30px;
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: inherit;
 }
 
 #wrapper {
   min-height: 100%;
   width: 100%;
+  background-image: url("../img/horizon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #main {
   overflow: auto;
-  padding-bottom: 100px;
+  padding-bottom: 160px;
+  height: 70%;
+  background: rgba(0,0, 0, 0.6);
 }
 
-#message {
+#topbar {
+  margin-top: 0px;
+  height: 40px;
   width: 100%;
-  padding-top:30vh;
+  background-color: #19191b;
   text-align: center;
+  font-size: 18px;
+}
+
+#topbar nav ul {
+  padding-top: 5px;
+}
+
+#topbar nav ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#topbar nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#topbar nav ul li a:hover {
+  color: green;
+}
+
+#signature {
+  font-family: 'Ruthie', cursive;
   font-size: 30px;
+}
+
+#sf_id {
+  width: 10px;
+  padding-left: 1px;
+}
+
+#content {
+  //outline: 1px solid green;
+  //overflow-y: scroll;
+  height: 600px;
+  font-size: 20px;
+}
+
+#about {
+  width: 350px;
+  height:70px;
+  padding-top:50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#post_preview {
+  width: 600px;
+  height: 380px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #19191b;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+.post {
+  //outline: 1px solid cyan;
+  height: 380px;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.post_header {
+  text-align: center;
+  width: 100%;
+  height: 240px;
+  //outline: 1px solid orange;
+
+}
+.post_title {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.post_date {
+  font-size: 15px;
+}
+
+.post_img {
+  width: 300px;
+  height: 200px;
+  padding: 5px;
+  ////outline: 1px solid yellow;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post_img img {
+  width: 100%;
+}
+
+.post_content {
+  padding: 25px;
+  font-size: 14px;
+  text-align: center;
 }
 
 .link {
@@ -60,11 +152,17 @@ header {
 }
 
 footer {
-  height: 120px;
-  margin-top: -100px;
+  height: 60px;
+  margin-top: -60px;
   position: relative;
   clear: both;
   text-align: center;
+  color: white;
+  //outline: 1px solid purple;
+}
+
+footer a {
+  text-decoration: none;
   color: white;
 }
 
@@ -73,11 +171,6 @@ footer {
 }
 .social {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
+  width: 30px;
+  height: 30px;
 }
