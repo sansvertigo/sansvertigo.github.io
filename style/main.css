@@ -51,7 +51,7 @@ html, body {
 }
 
 #topbar nav ul li a:hover {
-  color: green;
+  //color: green;
 }
 
 #signature {
