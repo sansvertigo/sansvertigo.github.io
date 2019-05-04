@@ -14,7 +14,7 @@ html, body {
 #wrapper {
   min-height: 100%;
   width: 100%;
-  background-image: url("../img/horizon.png");
+  background-image: url("../img/horizon_dark.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,7 +23,7 @@ html, body {
   overflow: auto;
   padding-bottom: 160px;
   height: 70%;
-  background: rgba(0,0, 0, 0.6);
+
 }
 
 #topbar {
