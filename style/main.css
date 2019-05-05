@@ -14,7 +14,8 @@ html, body {
 #wrapper {
   min-height: 100%;
   width: 100%;
-  background-image: url("../img/horizon_dark.png");
+  background-position: center;
+  background-image: url("../img/horizon.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,7 +24,7 @@ html, body {
   overflow: auto;
   padding-bottom: 160px;
   height: 70%;
-
+  background-color:rgba(0,0,0,0.6);
 }
 
 #topbar {
@@ -60,7 +61,7 @@ html, body {
 }
 
 #sf_id {
-  width: 12px;
+  width: 16px;
   padding-left: 1px;
 }
 
@@ -75,8 +76,12 @@ html, body {
   width: 600px;
   height: 380px;
   padding: 15px;
-  border-radius: 4px;
-  background-color: #19191b;
+  //border-radius: 4px;
+
+  //background-color: #19191b;
+  //background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.6));
+  background-image: linear-gradient(rgba(25,25,27,0.5), rgba(25,25,27,0.8), rgba(25,25,27,0.5));
+  opacity: 0.9;
   margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
