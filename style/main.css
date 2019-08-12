@@ -11,6 +11,10 @@ html, body {
 
 }
 
+.icons {
+  width: 40px;
+}
+
 #wrapper {
   min-height: 100%;
   width: 100%;
